@@ -1,7 +1,12 @@
 # Email service
 Email sending microservice using the Azure MSGraph API and Node.js
 
-Test using the following JSON input
+Send endpoint:
+
+**POST**
+{URL}/send
+
+Example body:
 ```{
   "to": "recipient@example.com",
   "subject": "Hello from Graph API",
