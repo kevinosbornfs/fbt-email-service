@@ -11,4 +11,3 @@ Example body:
   "to": "recipient@example.com",
   "subject": "Hello from Graph API",
   "body": "This is a test email sent using Microsoft Graph API."
-}
