@@ -1,11 +1,11 @@
 import { Request, Response } from 'express';
-import sendEmail from '../services/azureService';
+import sendAzureEmail from '../services/azureService';
 
-const sendEmailController = async (req: Request, res: Response) => {
-  const { to, subject, body } = req.body; 
+const azureEmailController = async (req: Request, res: Response) => {
+  const { to, subject, body } = req.body; ''
 
   try {
-    const status = await sendEmail(to, subject, body);
+    const status = await sendAzureEmail(to, subject, body);
 
     res.status(200).json({
       message: 'Email sent successfully',
@@ -19,4 +19,4 @@ const sendEmailController = async (req: Request, res: Response) => {
   }
 };
 
-export default sendEmailController;
+export default azureEmailController;

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { getAccessToken } from '../config/azureConfig';
 
-const sendEmail = async (to: string, subject: string, body: string) => {
+const sendAzureEmail = async (to: string, subject: string, body: string) => {
   try {
     const accessToken = await getAccessToken();
 
@@ -39,4 +39,4 @@ const sendEmail = async (to: string, subject: string, body: string) => {
   }
 };
 
-export default sendEmail;
+export default sendAzureEmail;
