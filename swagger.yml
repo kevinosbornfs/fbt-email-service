@@ -1,0 +1,53 @@
+openapi: 3.0.0
+info:
+  title: Email Service API
+  version: 1.0.0
+  description: API for sending emails using AWS and Azure.
+paths:
+  /aws/send:
+    post:
+      summary: Send email using AWS SES
+      description: Sends an email to the specified address using AWS SES.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                to:
+                  type: string
+                  description: Email recipient
+                subject:
+                  type: string
+                  description: Subject of the email
+                body:
+                  type: string
+                  description: Body of the email
+      responses:
+        '200':
+          description: Email sent successfully
+        '400':
+          description: Invalid request
+  /azure/send:
+    post:
+      summary: Send email using Azure
+      description: Sends an email to the specified address using Azure's Graph API.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                to:
+                  type: string
+                subject:
+                  type: string
+                body:
+                  type: string
+      responses:
+        '200':
+          description: Email sent successfully
+        '400':
+          description: Invalid request
