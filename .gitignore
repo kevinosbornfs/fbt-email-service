@@ -29,7 +29,7 @@ Thumbs.db
 .env
 
 # npm package lock file (optional, depending on your preferences)
-# package-lock.json
+package-lock.json
 # yarn.lock
 
 # Tyepscript coverage directory
