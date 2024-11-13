@@ -10,7 +10,8 @@ POST /email/azure/send
 
 Example request body:
 ```
-{  to: "recipient@example.com",
+{  
+  to: "recipient@example.com",
   subject: "Test Email",
   body: "This is a test email from Azure."
 }
@@ -18,7 +19,8 @@ Example request body:
 
 POST /email/aws/send
 ```
-{  to: "recipient@example.com",
+{  
+  to: "recipient@example.com",
   subject: "Test Email",
   body: "This is a test email from AWS SES."
 }
